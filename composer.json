@@ -1,0 +1,11 @@
+{
+    "name": "hosting/lb-healthcheck",
+    "description": "Helper classes for quickly implementing LB health check pages",
+    "autoload": {
+        "classmap": ["src/main/php"]
+    },
+    "require": {
+        "php": ">=5.5.0",
+        "hosting/commons-php": "0.1.*"
+    }
+}

@@ -6,6 +6,6 @@
     },
     "require": {
         "php": ">=5.5.0",
-        "hosting/commons-php": "0.1.*"
+        "hosting/commons-php": "dev-master"
     }
 }

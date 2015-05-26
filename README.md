@@ -1,5 +1,8 @@
 # lb-healthcheck
 
+## LB Health Check for Java
+This is just being built out, please stand by
+
 ## LB Health Check for PHP
 We recommend you install the LB Health Check functions with the [Composer] dependency manager. Run this bash command in your project's root directory to download and install the latest stable version into your project's vendor/ directory.
 

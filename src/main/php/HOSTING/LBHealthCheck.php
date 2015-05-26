@@ -1,6 +1,6 @@
 <?php
 
-namespace HOSTING\LBHealth;
+namespace HOSTING;
 
 use HOSTING\Commons\LogUtil;
 use HOSTING\Commons\RestUtil;

@@ -11,3 +11,5 @@ Next, require the Composer autoloader into your PHP application.
 <?php
 require 'vendor/autoload.php';
 ```
+
+[Composer]: https://getcomposer.org

@@ -4,7 +4,7 @@ Load balancer health check library and examples for PHP. Optimized for use with 
 ## Installation
 We recommend you install the LB Health Check functions with the [Composer] dependency manager. Run this bash command in your project's root directory to download and install the latest stable version into your project's vendor/ directory.
 
-```composer require hosting/lb-healthcheck```
+```composer require hosting/lb-healthcheck-php```
 
 Next, require the Composer autoloader into your PHP application:
 

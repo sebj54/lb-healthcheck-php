@@ -2,7 +2,6 @@
 
 namespace HOSTING;
 
-use HOSTING\Commons\LogUtil;
 use HOSTING\Commons\RestUtil;
 
 class LBHealthCheckException extends \Exception

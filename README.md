@@ -34,7 +34,7 @@ require 'vendor/autoload.php';
 \HOSTING\LBHealthCheck::success();
 ```
 
-If PHP is working, that single call to \HOSTING\LBHealthCheck::success() will complete and return the necessary HTTP status code and string to inform the load balancer to keep the server as an active member of the cluster. If the webserver or PHP processing is broken, it will return an error or timeout which will cause the load balacner to eject the server from the load balancing group.
+If PHP is working, that single call to `\HOSTING\LBHealthCheck::success()` will complete and return the necessary HTTP status code and string to inform the load balancer to keep the server as an active member of the cluster. If the webserver or PHP processing is broken, it will return an error or timeout which will cause the load balacner to eject the server from the load balancing group.
 
 Here is what that Cloud Load Balancer configuration would look like in the [HOSTING Customer Portal].
 

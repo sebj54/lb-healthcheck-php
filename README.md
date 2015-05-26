@@ -1,9 +1,7 @@
-# lb-healthcheck
+# lb-healthcheck-php
+Load balancer health check library and examples for PHP. Optimized for use with HOSTING Cloud Load Balancer but should work with just about any deployment.
 
-## LB Health Check for Java
-This is just being built out, please stand by
-
-## LB Health Check for PHP
+## Installation
 We recommend you install the LB Health Check functions with the [Composer] dependency manager. Run this bash command in your project's root directory to download and install the latest stable version into your project's vendor/ directory.
 
 ```composer require hosting/lb-healthcheck```
@@ -16,6 +14,8 @@ require 'vendor/autoload.php';
 ```
 
 And you're ready to go.
+
+## Usage
 
 This library is intended to be used most often with custom health check logic that you write and tests the critical components of your application. Examples of things to test would be:
 
@@ -36,6 +36,7 @@ require 'vendor/autoload.php';
 
 Drop that in your webroot as `health.php` and if PHP is working, that single call to `\HOSTING\LBHealthCheck::success()` will complete and return the necessary HTTP status code and string to inform the load balancer to keep the server as an active member of the cluster. If the webserver or PHP processing is broken, it will return an error or timeout which will cause the load balacner to eject the server from the load balancing group.
 
+## Load Balancer Configuration
 Here is what that Cloud Load Balancer configuration would look like in the [HOSTING Customer Portal].
 
 ![HOSTING Cloud Load Balancer Example Config](https://raw.github.com/HOSTINGLabs/lb-healthcheck/master/examples/config/config-screencap.png)

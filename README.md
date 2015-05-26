@@ -25,7 +25,7 @@ This library is intended to be used most often with custom health check logic th
 
 You can find examples of how to implement a health check script using your own custom logic in the [examples/php](examples/php) folder.
 
-If you're just wanting to get started with the bare minimum or if you're only concerned about the web server responding to requests and executing PHP scripts, perhaps the bare minimum implementation is for you:
+If you're just wanting to get started quickly or if you're only concerned about the web server responding to requests and executing PHP scripts, perhaps the bare minimum implementation is for you:
 
 ```php
 <?php

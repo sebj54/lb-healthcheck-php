@@ -1,5 +1,6 @@
 {
     "name": "hosting/lb-healthcheck-php",
+    "license": "MIT",
     "description": "Helper classes for quickly implementing LB health check pages",
     "autoload": {
         "classmap": ["src/main/php"]

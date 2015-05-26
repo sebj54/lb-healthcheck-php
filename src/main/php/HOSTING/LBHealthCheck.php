@@ -36,7 +36,7 @@ class LBHealthCheck
 		//$log = LogUtil::initStaticLogger(__CLASS__, __METHOD__, func_get_args());
 		//$log->trace("Handling LB health check result");
 		http_response_code($code);
-		http_send_content_type("application/json");
+		header('Content-Type: application/json');
 		return self::result($code, $message, $data);
 	}
 

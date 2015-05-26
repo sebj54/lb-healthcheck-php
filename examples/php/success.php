@@ -1,5 +1,5 @@
 <?php
 
-require_once(__DIR__."/../../main/php/HOSTING/LBHealthCheck/LBHealthCheck.php");
+require_once("vendor/autoload.php");
 
 LBHealthCheck::success();

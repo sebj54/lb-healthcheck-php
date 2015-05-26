@@ -18,14 +18,18 @@ class LBHealthCheck
 
 	public static function fail($message = self::RESULT_FAIL_MSG)
 	{
-		http_response_code($code);
-		echo self::result(self::RESULT_FAIL_CODE, $message);
+		echo self::internalResult(self::RESULT_FAIL_CODE, $message);
 	}
 
 	public static function success($message = self::RESULT_SUCCESS_MSG)
 	{
+		echo self::internalResult(self::RESULT_SUCCESS_CODE, $message);
+	}
+
+	private static function internalResult($code, $message)
+	{
 		http_response_code($code);
-		echo self::result(self::RESULT_SUCCESS_CODE, $message);
+		return self::result($code, $message);
 	}
 
 	public static function result($code, $message)

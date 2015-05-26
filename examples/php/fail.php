@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__."/../../main/php/HOSTING/LBHealth/LBHealthCheck.php");
+require_once("vendor/autoload.php");
 
 use HOSTING\LBHealth\LBHealthCheck;
 

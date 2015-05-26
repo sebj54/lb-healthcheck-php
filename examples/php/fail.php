@@ -2,4 +2,4 @@
 
 require_once("vendor/autoload.php");
 
-HOSTING\LBHealthCheck::fail();
+\HOSTING\LBHealthCheck::fail();

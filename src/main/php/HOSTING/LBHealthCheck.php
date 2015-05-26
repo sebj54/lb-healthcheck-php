@@ -19,22 +19,22 @@ class LBHealthCheck
 
 	public static function fail($message = self::RESULT_FAIL_MSG, $data = null)
 	{
-		$log = LogUtil::initStaticLogger(__CLASS__, __METHOD__, func_get_args());
-		$log->error("Failure with load balancer health check logic: '".$message."'");
+		//$log = LogUtil::initStaticLogger(__CLASS__, __METHOD__, func_get_args());
+		//$log->error("Failure with load balancer health check logic: '".$message."'");
 		echo self::internalResult(self::RESULT_FAIL_CODE, $message, $data);
 	}
 
 	public static function success($message = self::RESULT_SUCCESS_MSG, $data = null)
 	{
-		$log = LogUtil::initStaticLogger(__CLASS__, __METHOD__, func_get_args());
-		$log->debug("Success with load balancer health check logic: '".$message."'");
+		//$log = LogUtil::initStaticLogger(__CLASS__, __METHOD__, func_get_args());
+		//$log->debug("Success with load balancer health check logic: '".$message."'");
 		echo self::internalResult(self::RESULT_SUCCESS_CODE, $message, $data);
 	}
 
 	private static function internalResult($code, $message, $data)
 	{
-		$log = LogUtil::initStaticLogger(__CLASS__, __METHOD__, func_get_args());
-		$log->trace("Handling LB health check result");
+		//$log = LogUtil::initStaticLogger(__CLASS__, __METHOD__, func_get_args());
+		//$log->trace("Handling LB health check result");
 		http_response_code($code);
 		http_send_content_type("application/json");
 		return self::result($code, $message, $data);
@@ -42,8 +42,8 @@ class LBHealthCheck
 
 	public static function result($code, $message, $data)
 	{
-		$log = LogUtil::initStaticLogger(__CLASS__, __METHOD__, func_get_args());
-		$log->trace("Generating JSON result message [".$code."]".": ".$message);
+		//$log = LogUtil::initStaticLogger(__CLASS__, __METHOD__, func_get_args());
+		//$log->trace("Generating JSON result message [".$code."]".": ".$message);
 		return RestUtil::result(false, $code, $message, null, $data);
 	}
 }

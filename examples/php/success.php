@@ -5,14 +5,16 @@ require_once("vendor/autoload.php");
 // This example health check function will always succeed
 // Typically you'd put your own test logic here to make sure
 // this server was working as intended
+//
+// You want these functions to return TRUE if all is well
+// or return FALSE if something went wrong and the server
+// should be removed from the LB group
 function myHealthCheck1()
 {
 	return true;
 }
 
-// This example health check function will always succeed
-// Typically you'd put your own test logic here to make sure
-// this server was working as intended
+// Another always successful example
 function myHealthCheck2()
 {
 	return true;

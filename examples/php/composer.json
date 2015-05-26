@@ -8,7 +8,7 @@
         }
     ],
     "require": {
-        "hosting/lb-healthcheck": "dev-master"
+        "hosting/lb-healthcheck-php": "dev-master"
     },
     "config": {
         "vendor-dir" : "./vendor",

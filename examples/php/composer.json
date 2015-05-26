@@ -1,0 +1,17 @@
+{
+    "name": "lb-healthcheck-example",
+    "description": "Example LB healthchecks for PHP",
+    "authors": [
+        {
+            "name": "Sean Bruton",
+            "email": "sbruton@hosting.com"
+        }
+    ],
+    "require": {
+        "hosting/lb-healthcheck": "dev-master"
+    },
+    "config": {
+        "vendor-dir" : "./vendor",
+        "component-dir": "./components"
+    }
+}

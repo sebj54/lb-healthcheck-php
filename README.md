@@ -14,7 +14,15 @@ require 'vendor/autoload.php';
 
 And you're ready to go.
 
-Here's the simplest fully functional example health check script using this library:
+This library is intended to be used most often with custom health check logic that you write and tests the critical components of your application. Examples of things to test would be:
+
+* Connectivity to your database or other storage repository
+* Availabilty of critical services (e.g., payment gateway, service bus)
+* Functionality of core business logic (e.g., call some controller functions)
+
+You can find examples of how to implement a health check script using your own custom logic in the [examples/php](examples/php) folder.
+
+If you're just wanting to get started with the bare minimum or if you're only concerned about the web server responding to requests and executing PHP scripts, perhaps the bare minimum implementation is for you:
 
 ```php
 <?php

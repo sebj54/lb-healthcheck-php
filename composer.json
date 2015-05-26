@@ -1,5 +1,5 @@
 {
-    "name": "hosting/lb-healthcheck",
+    "name": "hosting/lb-healthcheck-php",
     "description": "Helper classes for quickly implementing LB health check pages",
     "autoload": {
         "classmap": ["src/main/php"]

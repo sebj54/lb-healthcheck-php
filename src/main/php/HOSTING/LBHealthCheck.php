@@ -9,10 +9,10 @@
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -36,7 +36,7 @@ class LBHealthCheck
 	const RESULT_SUCCESS_CODE	= "200";
 	const RESULT_SUCCESS_MSG	= "OK";
 	const RESULT_FAIL_CODE		= "500";
-	const RESULT_FAIL_MSG		= "Unspecified error";
+	const RESULT_FAIL_MSG		= "Internal Server Error";
 
 	public static function process($checks)
 	{
@@ -77,6 +77,7 @@ class LBHealthCheck
 
 	public static function result($code, $message, $data)
 	{
-		return RestUtil::result(false, $code, $message, null, $data);
+		header('HTTP/1.1 ' . $code . ' ' . $message);
+		echo \json_encode($data);
 	}
 }

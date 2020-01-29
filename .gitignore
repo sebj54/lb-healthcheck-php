@@ -1,6 +1,5 @@
 vendor/
 components/
-composer.lock
 .classpath
 /target/
 .settings/

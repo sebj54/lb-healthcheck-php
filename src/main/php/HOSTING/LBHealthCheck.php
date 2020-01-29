@@ -58,12 +58,12 @@ class LBHealthCheck
 		}
 	}
 
-	public static function fail($message = self::RESULT_FAIL_MSG, $data = null)
+	public static function fail($message = self::RESULT_FAIL_MSG, $data = false)
 	{
 		echo self::internalResult(self::RESULT_FAIL_CODE, $message, $data);
 	}
 
-	public static function success($message = self::RESULT_SUCCESS_MSG, $data = null)
+	public static function success($message = self::RESULT_SUCCESS_MSG, $data = true)
 	{
 		echo self::internalResult(self::RESULT_SUCCESS_CODE, $message, $data);
 	}

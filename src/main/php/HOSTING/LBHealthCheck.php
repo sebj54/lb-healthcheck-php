@@ -24,15 +24,9 @@
 
 namespace HOSTING;
 
-use HOSTING\Commons\RestUtil;
-
-class LBHealthCheckException extends \Exception
-{
-}
 
 class LBHealthCheck
 {
-
 	const RESULT_SUCCESS_CODE	= "200";
 	const RESULT_SUCCESS_MSG	= "OK";
 	const RESULT_FAIL_CODE		= "500";

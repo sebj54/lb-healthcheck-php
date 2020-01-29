@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-require_once("../../vendor/autoload.php");
+require_once(__DIR__ . '/../../vendor/autoload.php');
 
 // This example health check function will always succeed
 //

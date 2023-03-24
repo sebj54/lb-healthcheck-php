@@ -27,9 +27,9 @@ namespace HOSTING;
 
 class LBHealthCheck
 {
-	const RESULT_SUCCESS_CODE	= "200";
+	const RESULT_SUCCESS_CODE	= 200;
 	const RESULT_SUCCESS_MSG	= "OK";
-	const RESULT_FAIL_CODE		= "500";
+	const RESULT_FAIL_CODE		= 500;
 	const RESULT_FAIL_MSG		= "Internal Server Error";
 
 	public static function process($checks)

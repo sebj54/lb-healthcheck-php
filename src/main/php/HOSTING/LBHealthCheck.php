@@ -44,29 +44,39 @@ class LBHealthCheck
 		}
 		if($allChecksSuccessful)
 		{
-			self::success();
+			static::success();
 		}
 		else
 		{
-			self::fail();
+			static::fail();
 		}
 	}
 
-	public static function fail($message = self::RESULT_FAIL_MSG, $data = false)
+	public static function fail($message = null, $data = false)
 	{
-		echo self::internalResult(self::RESULT_FAIL_CODE, $message, $data);
+		if (is_null($message))
+		{
+			$message = static::RESULT_FAIL_MSG;
+		}
+
+		echo static::internalResult(static::RESULT_FAIL_CODE, $message, $data);
 	}
 
-	public static function success($message = self::RESULT_SUCCESS_MSG, $data = true)
+	public static function success($message = null, $data = true)
 	{
-		echo self::internalResult(self::RESULT_SUCCESS_CODE, $message, $data);
+		if (is_null($message))
+		{
+			$message = static::RESULT_SUCCESS_MSG;
+		}
+
+		echo static::internalResult(static::RESULT_SUCCESS_CODE, $message, $data);
 	}
 
 	private static function internalResult($code, $message, $data)
 	{
 		http_response_code($code);
 		header('Content-Type: application/json');
-		return self::result($code, $message, $data);
+		return static::result($code, $message, $data);
 	}
 
 	public static function result($code, $message, $data)
